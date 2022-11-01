@@ -5,199 +5,218 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Non-Fungible Team</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"-->
+    <!--            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <script src="https://kit.fontawesome.com/b19aa1ed0a.js" crossorigin="anonymous"></script>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bebas Neue', cursive;
-}
-body {
-    background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
-}
-.header {
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    padding-top: 18%;
-    padding-bottom: 35%;
-}
+            margin: 0;
+            padding: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
 
-.part1 {  /* 팀 소개페이지 */
-    min-height: 32vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
+        body {
+            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+        }
 
-.part2 {  /* 팀 프로필 카드 */
-    min-height: 68vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    top: 30%;
-}
-
-.part3 {  /* 팀 소개 */
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.part4 {  /* 방명록 */
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    top: 30%;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin: auto;
-    padding-bottom: 20px;
-    border: 2px;
-}
-.card-1 {
-    display: flex;
-    border: 2px;
-}
-.card-image-1 {
-    width: 30%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: black;
-}
-.card-image-1 img {
-    width: 70%;
-    min-height: 70%;
-}
-.card-text-1 {
-    width: 70%;
-    padding: 10px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
+        .header {
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            padding-top: 18%;
+            padding-bottom: 35%;
+        }
 
 
-nav{
+        .part1 { /* 팀 소개페이지 */
+            min-height: 32vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-}
+        /*.part2 { !* 팀 프로필 카드 *!*/
+        /*    min-height: 68vh;*/
+        /*    width: 100%;*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    position: relative;*/
+        /*    display: flex;*/
+        /*    top: 30%;*/
+        /*}*/
 
-nav img{
-    width: 150px;
-    height: 150px;
-    padding-top: 20px;
-}
+        .card {
+            margin: 10px;
+            background-position: center;
+        }
+        .part3 { /* 팀 소개 */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-.maintitle {
-    flex: 1;
-    text-align: center;
-    padding-top: 50px;
-}
+        .part4 { /* 방명록 */
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            top: 30%;
+        }
 
-.maintitle a{
-    color: rgb(10, 6, 6);
-    text-decoration: none;
-    font-size: 90px;
-}
-/* this is underline effect when the cursor hovers over the title */
-.maintitle::after{
-    content: '';
-    width: 0%;
-    height: 6px;
-    background: #090707;
-    display: block;
-    margin: auto;
-    transition: 1.2s;
-}
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: auto;
+            padding-bottom: 20px;
+            border: 2px;
+        }
 
-.maintitle:hover::after{
-    width: 42%;
-}
-/* up to here (hover effect) */
+        .card-1 {
+            display: flex;
+            border: 2px;
+        }
 
-.button-down-1 {
-    display: none;
-}
+        .card-image-1 {
+            width: 30%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: black;
+        }
 
-.button-down-1:hover + .button-down-1{
-    display: inline-block;
-}
+        .card-image-1 img {
+            width: 70%;
+            min-height: 70%;
+        }
 
-/* member profile cards */
+        .card-text-1 {
+            width: 70%;
+            padding: 10px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
-.profile-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
 
-.profile-title {
-  color: grey;
-  font-size: 18px;
-}
+        nav {
 
-profile-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+        }
 
-profile a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
+        nav img {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
+        .maintitle {
+            flex: 1;
+            text-align: center;
+            padding-top: 50px;
+        }
 
-/* end of member profile card */
+        .maintitle a {
+            color: rgb(10, 6, 6);
+            text-decoration: none;
+            font-size: 90px;
+        }
 
-.comment-box {
-    width: 90%;
-    color: black;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+        /* this is underline effect when the cursor hovers over the title */
+        .maintitle::after {
+            content: '';
+            width: 0%;
+            height: 6px;
+            background: #090707;
+            display: block;
+            margin: auto;
+            transition: 1.2s;
+        }
 
-a:link {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-}
+        .maintitle:hover::after {
+            width: 42%;
+        }
+
+        /* up to here (hover effect) */
+
+        .button-down-1 {
+            display: none;
+        }
+
+        .button-down-1:hover + .button-down-1 {
+            display: inline-block;
+        }
+
+        /* member profile cards */
+
+        .profile-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .profile-title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        profile-button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        profile a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        /* end of member profile card */
+
+        .comment-box {
+            width: 90%;
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
     </style>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             show_comment();
         })
+
         function save_comment() {
             let name = $('#name').val()
             let comment = $('#comment').val()
@@ -205,13 +224,14 @@ a:link {
             $.ajax({
                 type: "POST",
                 url: "/guest",
-                data: {'name_give':name, 'comment_give':comment},
+                data: {'name_give': name, 'comment_give': comment},
                 success: function (response) {
                     alert(response["msg"])
                     window.location.reload()
                 }
             });
         }
+
         function show_comment() {
             $('#comment-list').empty()
             $.ajax({
@@ -237,17 +257,39 @@ a:link {
                 }
             });
         }
+
         let likes = 0
+
         function like_count() {
             likes = likes + 1
-             $.ajax({
+            $.ajax({
                 type: "POST",
                 url: "/like",
-                data: {'like_give':likes},
+                data: {'like_give': likes},
                 success: function (response) {
-                    console.log(likes)
+                    alert(response['msg'])
                 }
             });
+            show_like()
+        }
+
+        function show_like() {
+            $.ajax({
+                type: "GET",
+                url: "/like",
+                data: {},
+                success: function (response) {
+                    alert(response['counts'])
+                }
+            });
+        }
+
+        function open_memberbox() {
+            alert('박스 열기')
+        }
+
+        function close_memberbox() {
+            alert('박스 닫기')
         }
     </script>
 </head>
@@ -264,7 +306,7 @@ a:link {
                 <img src="https://cdn-icons-png.flaticon.com/512/6699/6699362.png" alt="image"/>
             </div>
             <div class="card-text-1">
-                <p style="font-size: 30px; line-height: 1.4em"><b>NFT (Non-Fungible Team : 대체 불가능한 존재가 돼라!)<br> </p>
+                <p style="font-size: 30px; line-height: 1.4em"><b>NFT (Non-Fungible Team : 대체 불가능한 존재가 돼라!)<br></p>
                 <p style="font-size: 18px">저희는 대체 불가능한 토큰 NFT(Non-Fungible Token)와 같이 대체 불가능한 개발자를 목표로 하는 팀 입니다!</b></p>
                 <br>
                 <br>
@@ -276,58 +318,94 @@ a:link {
         </div> <!-- End of Card 1 -->
     </div>
 </section> <!-- 팀소개 페이지 -->
-<section class="part2">
-    <div class="profile-card" id="profile1">
+<div class="part2">
+    <div class="card" style="width: 18rem;"> <!--사진해상도는 1080*1440으로 맞추기-->
         <img src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김태웅" style="width:65%">
-        <h1>김태웅</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">김태웅</h5>
+            <p class="card-text">간략한 자기 소개말</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">CREW</li>
+            <li class="list-group-item">TEAM5 - NFT</li>
+        </ul>
+        <div class="card-body">
+            <a href="mailto:본인메일주소" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+            <a href="본인블로그주소" class="card-link"><i class="fa-solid fa-blog"></i></a>
+            <a href="본인인스타주소" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
-    <div class="profile-card" id="profile2">
+    <div class="card" style="width: 18rem;">
         <img src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김송미" style="width:65%">
-        <h1>김송미</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">김송미</h5>
+            <p class="card-text">간략한 자기 소개말</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">CREW</li>
+            <li class="list-group-item">TEAM5 - NFT</li>
+        </ul>
+        <div class="card-body">
+            <a href="mailto:본인메일주소" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+            <a href="본인블로그주소" class="card-link"><i class="fa-solid fa-blog"></i></a>
+            <a href="본인인스타주소" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
-    <div class="profile-card" id="profile3">
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F14c067ea-9308-4356-a5ac-bed628498405%2FKakaoTalk_20221027_164552260.jpg?table=block&id=6d3dd4d3-2a98-4c11-ae85-09b669143ce8&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=b2c70268-ad08-4eae-b16b-2c9779561276&cache=v2"
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">이솔</h5>
+            <p class="card-text">안녕하세요! Spring B팀 5조의 팀장을 맡고 있는 이솔이라고 합니다! 이름이 외자라 이솔님이라 하시는 분들이 많으신데 솔님이라고 불러주시면
+                감사하겠습니다>_<!</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">CAPTAIN</li>
+            <li class="list-group-item">TEAM5 - NFT</li>
+        </ul>
+        <div class="card-body">
+            <a href="mailto:leeso4567@naver.com" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://tobeagoodengineer.tistory.com/" class="card-link"><i class="fa-solid fa-blog"></i></a>
+            <a href="https://www.instagram.com/eeeeesol/" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
         <img src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="이솔" style="width:65%">
-        <h1>이솔</h1>
-        <p class="profile-title">Captain</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">박찬환</h5>
+            <p class="card-text">간략한 자기 소개말</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">CREW</li>
+            <li class="list-group-item">TEAM5 - NFT</li>
+        </ul>
+        <div class="card-body">
+            <a href="mailto:본인메일주소" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+            <a href="본인블로그주소" class="card-link"><i class="fa-solid fa-blog"></i></a>
+            <a href="본인인스타주소" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
-    <div class="profile-card" id="profile4">
+    <div class="card" style="width: 18rem;">
         <img src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="박찬환" style="width:65%">
-        <h1>박찬환</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+             class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">홍승엽</h5>
+            <p class="card-text">간략한 자기 소개말</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">CREW</li>
+            <li class="list-group-item">TEAM5 - NFT</li>
+        </ul>
+        <div class="card-body">
+            <a href="mailto:본인메일주소" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+            <a href="본인블로그주소" class="card-link"><i class="fa-solid fa-blog"></i></a>
+            <a href="본인인스타주소" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </div>
-    <div class="profile-card" id="profile5">
-        <img src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="홍승엽" style="width:65%">
-        <h1>홍승엽</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-</section> <!-- 팀원 프로필 카드 -->
+</div> <!-- 팀원 프로필 카드 -->
 <section class="part3">
 </section>
 <section class="part4">
@@ -339,18 +417,13 @@ a:link {
         </div>
         <br>
         <div class="mb-3">
-            <label for="comment" class="form-label">댓글&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="comment" class="form-label">댓글</label>
             <textarea class="form-control" id="comment" cols="40" rows="5"
                       style="font-size: 17px" placeholder="comment here"></textarea>
         </div>
         <div style="text-align: center">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                <button onclick = "like_count()">좋아요</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            <p>&nbsp;
+                <button onclick="like_count()">좋아요</button>
                 <button onclick="save_comment(),show_comment()">댓글 남기기</button>
             </p>
         </div>
