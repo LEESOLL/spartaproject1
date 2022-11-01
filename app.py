@@ -36,8 +36,11 @@ def guest_get():
 def like_count():
     like_receive = request.form["like_give"]
 
+    like_list = list(db.like.find({}, {'_id': False}))
+    count = len(like_list) + 1
+
     doc = {
-        'likes' : like_receive
+        'likes' : count
     }
     db.like.insert_one(doc)
     return jsonify({'msg': '❤좋아요 좋아요❤'})
