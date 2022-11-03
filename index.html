@@ -1,212 +1,118 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Non-Fungible Team</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Intro Lee Sol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Bebas Neue', cursive;
+            font-family: 'Bebas Neue';
         }
 
-        body {
-            background-image: linear-gradient(rgba(0.1, 1, 1, 0.2), rgba(0.1, 1, 0, 0.1));
+        h1 {
+            background: linear-gradient(to right, rgb(199, 219, 245), rgb(242, 243, 248));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            pointer-events: none;
+            animation: fade ease-in 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+
+            font-size: 100px;
         }
 
-        .header {
+        .paragraph {
+            margin-left: 70px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #left_to_right_effect {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img {
             width: 100%;
+            height: 100vh;
+            background-image: url("https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7ae0bdf2-a63b-4019-abee-1e3d7d6c7fb2%2Fclouds-gd920e430a_1920.jpg?table=block&id=e77e4de3-96cb-44f0-86cc-4d399f50a908&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=b2c70268-ad08-4eae-b16b-2c9779561276&cache=v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .img-text {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            color: white;
+            font-size: 40px;
+        }
+
+        .one {
+            background-color: #3381B2;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
             background-position: center;
             background-size: cover;
             position: relative;
-            padding-top: 18%;
-            padding-bottom: 35%;
+            background-attachment: fixed;
         }
 
-        .part1 { /* 팀 소개페이지 */
+        .two {
+            background-color: #FFFFFF;
             min-height: 32vh;
             width: 100%;
+            height: 100vh;
             background-position: center;
             background-size: cover;
             position: relative;
         }
 
-        .part2 { /* 팀 프로필 카드 */
-            min-height: 68vh;
+        .three {
+            background-color: #3381B2;
             width: 100%;
             background-position: center;
             background-size: cover;
             position: relative;
-            display: flex;
-            top: 30%;
         }
-
-        .part3 { /* 팀 소개 */
-            min-height: 100vh;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .part4 { /* 방명록 */
-            min-height: 80vh;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-            top: 10%;
-        }
-
-        .part5 {
-            min-height: 100vh;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-            position: center;
-        }
-
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
-            margin: auto;
-            padding-bottom: 20px;
-            border: 2px;
-        }
-
-        .card-1 {
-            display: flex;
-            border: 2px;
-        }
-
-        .card-image-1 {
-            width: 30%;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border: black;
-        }
-
-        .card-image-1 img {
-            width: 70%;
-            min-height: 70%;
-        }
-
-        .card-text-1 {
-            width: 70%;
-            padding: 10px;
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-
-
-        nav {
-
-        }
-
-        nav img {
-            width: 150px;
-            height: 150px;
-            padding-top: 20px;
-        }
-
-        .maintitle {
-            flex: 1;
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        .maintitle a {
-            color: rgb(10, 6, 6);
-            text-decoration: none;
-            font-size: 90px;
-        }
-
-        /* this is underline effect when the cursor hovers over the title */
-        .maintitle::after {
-            content: '';
-            width: 0%;
-            height: 6px;
-            background: #090707;
-            display: block;
-            margin: auto;
-            transition: 1.2s;
-        }
-
-        .maintitle:hover::after {
-            width: 42%;
-        }
-
-        /* up to here (hover effect) */
-
-        .button-down-1 {
-            display: none;
-        }
-
-        .personal-profile {
-            height: 500px;
-            margin: auto;
-            width: 70%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .button-down-1:hover + .button-down-1 {
-            display: inline-block;
-        }
-
-        /* member profile cards */
-
-        .profile-card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .profile-title {
-            color: grey;
-            font-size: 18px;
-        }
-
-        profile-button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
-
-        profile a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-
-        button:hover, a:hover {
-            opacity: 0.7;
-        }
-
-        /* end of member profile card */
 
         .comment-box {
             width: 90%;
@@ -218,45 +124,41 @@
             text-align: center;
         }
 
-        a:link {
-            color: black;
-            background-color: transparent;
-            text-decoration: none;
+        .solimage {
+            margin-left: 50px;
+            max-width: 400px;
+            max-height: 400px;
         }
 
-        /* this is the comment list section maybe this time it will work */
+       .infocard {
+           border-color: transparent;
+       }
 
-        .comment-list {
-            width: 90%;
-            color: black;
-            position: relative;
-            top: 35%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        /* end of comment list */
     </style>
+
     <script>
         $(document).ready(function () {
-            show_comment();
-            get_like1()
-            get_like2()
             get_like3()
-            get_like4()
-            get_like5()
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
+        })
+        window.onload = function () {
+            const EFFECT = document.querySelector('#left_to_right_effect');
 
-            $('#guest1').hide()
-            $('#guest2').hide()
-            $('#guest3').hide()
-            $('#guest4').hide()
-            $('#guest5').hide()
-            })
+            window.addEventListener('scroll', scrollEffect);
+
+            function scrollEffect() {
+                if (window.scrollY >= 500) {
+                    EFFECT.style.opacity = '1';
+                    EFFECT.style.transform = 'translateX(0px)';
+                    EFFECT.style.transition = '1s ease-in-out';
+                } else {
+                    EFFECT.style.opacity = '0';
+                    EFFECT.style.transform = 'translateX(-50px)';
+                }
+            }
+
+            scrollEffect();
+        }
+
         function save_comment() {
             let name = $('#name').val()
             let comment = $('#comment').val()
@@ -298,99 +200,8 @@
             });
         }
 
-        function showing1() {
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            $('#part3-box-1').show()
-
-            $('#guest2').hide()
-            $('#guest3').hide()
-            $('#guest4').hide()
-            $('#guest5').hide()
-            $('#guest1').show()
-        }
-
-        function showing2() {
-            $('#part3-box-1').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            $('#part3-box-2').show()
-
-            $('#guest1').hide()
-            $('#guest3').hide()
-            $('#guest4').hide()
-            $('#guest5').hide()
-            $('#guest2').show()
-        }
-
-        function showing3() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').hide()
-            $('#part3-box-3').show()
-
-            $('#guest1').hide()
-            $('#guest2').hide()
-            $('#guest4').hide()
-            $('#guest5').hide()
-            $('#guest3').show()
-        }
-
-        function showing4() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-5').hide()
-            $('#part3-box-4').show()
-
-            $('#guest1').hide()
-            $('#guest2').hide()
-            $('#guest3').hide()
-            $('#guest5').hide()
-            $('#guest4').show()
-        }
-
-        function showing5() {
-            $('#part3-box-1').hide()
-            $('#part3-box-2').hide()
-            $('#part3-box-3').hide()
-            $('#part3-box-4').hide()
-            $('#part3-box-5').show()
-
-            $('#guest1').hide()
-            $('#guest2').hide()
-            $('#guest3').hide()
-            $('#guest4').hide()
-            $('#guest5').show()
-        }
-        function like_count1() {
-             $.ajax({
-                type: "POST",
-                url: "/like1",
-                data: {},
-                success: function (response) {
-                    alert('좋아요 멘트 각자 넣기')
-                    $('#likesu1').text(response['like'])
-                }
-            })
-        }
-         function like_count2() {
-             $.ajax({
-                type: "POST",
-                url: "/like2",
-                data: {},
-                success: function (response) {
-                    alert('좋아요 멘트 각자 넣기')
-                    $('#likesu2').text(response['like'])
-                }
-            })
-        }
-         function like_count3() {
-             $.ajax({
+        function like_count3() {
+            $.ajax({
                 type: "POST",
                 url: "/like3",
                 data: {},
@@ -400,52 +211,8 @@
                 }
             })
         }
-         function like_count4() {
-             $.ajax({
-                type: "POST",
-                url: "/like4",
-                data: {},
-                success: function (response) {
-                    alert('좋아요 멘트 각자 넣기')
-                    $('#likesu4').text(response['like'])
-                }
-            })
-        }
-         function like_count5() {
-             $.ajax({
-                type: "POST",
-                url: "/like5",
-                data: {},
-                success: function (response) {
-                    alert('좋아요 멘트 각자 넣기')
-                    $('#likesu5').text(response['like'])
-                }
-            })
-        }
 
-        function get_like1() {
-            $.ajax({
-                type: "GET",
-                url: "/like1",
-                data: {},
-                success: function (response) {
-                    let likecnt1 = response['like']
-                    $('#likesu1').text(likecnt1)
-                }
-            })
-        }
-         function get_like2() {
-            $.ajax({
-                type: "GET",
-                url: "/like2",
-                data: {},
-                success: function (response) {
-                    let likecnt2 = response['like']
-                    $('#likesu2').text(likecnt2)
-                }
-            })
-        }
-         function get_like3() {
+        function get_like3() {
             $.ajax({
                 type: "GET",
                 url: "/like3",
@@ -456,351 +223,113 @@
                 }
             })
         }
-         function get_like4() {
-            $.ajax({
-                type: "GET",
-                url: "/like4",
-                data: {},
-                success: function (response) {
-                    let likecnt4 = response['like']
-                    $('#likesu4').text(likecnt4)
-                }
-            })
-        }
-
-         function get_like5() {
-            $.ajax({
-                type: "GET",
-                url: "/like5",
-                data: {},
-                success: function (response) {
-                    let likecnt5 = response['like']
-                    $('#likesu5').text(likecnt5)
-                }
-            })
-        }
     </script>
 </head>
 <body>
-<section class="header">
-    <nav>
-        <div class="maintitle"><a>Non-Fungible Team</a></div>
-    </nav>
-</section> <!-- 제목 페이지 -->
-<section class="part1">
-    <div class="card-container">
-        <div class="card-1"> <!-- Card 1 -->
-         <div class="card-image-1"><img src="https://img.hankyung.com/photo/202207/AD.30616227.1.png" alt="image"/></div>
-            <div class="card-text-1">
-                <p style="font-size: 35px; line-height: 1.4em"><b>NFT (Non-Fungible&nbsp; Team) : 대체&nbsp; 불가능한&nbsp; 존재가&nbsp; 돼라!)<br></p><br>
-                <p style="font-size: 18px">저희는 &nbsp; 대체 &nbsp;불가능한 &nbsp;토큰&nbsp; NFT(Non-Fungible Token)처럼 &nbsp;대체 &nbsp;불가능한&nbsp;  개발자를 &nbsp;목표로&nbsp; 하는&nbsp; 팀 입니다!</br></p>
-                <br> <hr style="border: solid 3px black; width : 66%;">
-                <br>
-                <p style="line-height: 1.5em; font-size: 15px;"><p>저희팀은&nbsp 모두 <span style="color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>
-                    외교형(NF)</strong></span>으로 &nbsp 구성되어 &nbsp 있습니다.</p> <br>
-                    대체불가한 &nbsp;  팀장은 &nbsp; 재기발랄 활동가,&nbsp; 대체불가한 &nbsp; 팀원 &nbsp;
-                    2명은 &nbsp; 열정적인 &nbsp; 중재자,&nbsp;<br>그리고&nbsp; 대체불가한&nbsp; 팀원&nbsp; 1명은&nbsp; 정의로운&nbsp; 사회운동가까지! <br>
-                    <br>어느 &nbsp; 곳에서도 &nbsp; 스며들고 &nbsp; 녹아들어&nbsp; 협업을&nbsp; 위한&nbsp; 완벽한 &nbsp; 시너지를&nbsp; 만듭니다.</p><p><br> 개발자 &nbsp;붐이&nbsp;
-                    일어난&nbsp; 지&nbsp; 수년&nbsp;째 &nbsp;입니다. <br> 여러&nbsp; 교육&nbsp; 기관을&nbsp; 통해 &nbsp;수요가 &nbsp;충족 &nbsp;되고&nbsp; 있지만&nbsp; 역량&nbsp; 있는&nbsp; 개발자에 대한 &nbsp; 수요는&nbsp; 턱 &nbsp;없이 &nbsp;부족한 &nbsp; 상황입니다. </p><p><br>대체&nbsp; 가능한 &nbsp;역량의&nbsp; 개발자가 &nbsp;아닌,
-                    <strong> <span style="color: darkslategrey; border-style:double; border-color:gary; width:60%; margin:0 auto; padding:3px; text-align:center">대체
-                    불가능한(Non-Fongible)</strong></span>&nbsp; 역량의 &nbsp;개발자가&nbsp; 되기 &nbsp;위해&nbsp; 모인&nbsp; <br><br>저희 <span style="font-size : 18px; color: darkslategrey; border-style:double; width:50%; margin:0 auto; padding:3px; text-align:center"><strong>NFT(Non-Fongible Team)</strong></span>&nbsp;의 팀원들을 소개하겠습니다.
-                    <br><br>
+<div class="img"></div>
+<div class="img-text">
+    <h1>Non-Fungible Team</h1>
+    <h1>Captain Lee Sol</h1>
+</div>
+    <section class="one">
+        <div id="left_to_right_effect">
+            <div class="solimage">
+                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F14c067ea-9308-4356-a5ac-bed628498405%2FKakaoTalk_20221027_164552260.jpg?table=block&id=6d3dd4d3-2a98-4c11-ae85-09b669143ce8&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1340&userId=b2c70268-ad08-4eae-b16b-2c9779561276&cache=v2"
+                     width="100%" height="100%"/>
             </div>
-        </div> <!-- End of Card 1 -->
-    </div>
-</section> <!-- 팀소개 페이지 -->
-<section class="part2">
-    <div class="profile-card" id="profile1" style="width: 15%";>
-        <img onclick=showing1()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김태웅" style="max-width:50%; max-height: 50%">
-        <h1>김태웅</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-blog"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile2" style="width: 15%">
-        <img onclick=showing2()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="김송미" style="max-width:50%; max-height: 50%">
-        <h1>김송미</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-blog"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile3" style="width: 15%">
-        <img onclick=showing3()
-             src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/14c067ea-9308-4356-a5ac-bed628498405/KakaoTalk_20221027_164552260.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221102T115356Z&X-Amz-Expires=86400&X-Amz-Signature=c6a048501a6a8f163fefb7d69807e5ebb2618e00c61573d52de96a6e50c65643&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22KakaoTalk_20221027_164552260.jpg%22&x-id=GetObject"
-             alt="이솔" style="max-width:50%; max-height: 50%">
-        <h1>이솔</h1>
-        <p class="profile-title">Captain</p>
-        <p>Team 5</p>
-        <a href="mailto:leeso4567@naver.com" class="card-link"><i class="fa-regular fa-envelope"></i></a>
-        <a href="https://tobeagoodengineer.tistory.com/" class="card-link"><i class="fa-solid fa-blog"></i></a>
-        <a href="https://www.instagram.com/eeeeesol/" class="card-link"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile4" style="width: 15%">
-        <img onclick=showing4()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="박찬환" style="max-width:50%; max-height: 50%">
-        <h1>박찬환</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-blog"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-    <div class="profile-card" id="profile5" style="width: 15%">
-        <img onclick=showing5()
-             src="https://w.namu.la/s/59bbf73b123d0f9f693be3c3de9506b24a1f2a3067b4ffd0207a3a08eee32d750ebf1ca3e33084aa3bbcd6916bd0a8a187cc4556b87fa269c25f1a7ff3ea279f1e372d23aa0a6eee8d5932c70d5dac0e484717f36b344bc0f36df96e7dd97d974dd2f4d51b64ea2324697118cec88c73"
-             alt="홍승엽" style="max-width:50%; max-height: 50%">
-        <h1>홍승엽</h1>
-        <p class="profile-title">Crew</p>
-        <p>Team 5</p>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-blog"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-</section> <!-- 팀원 프로필 카드 -->
-<section class="part3">
-    <div class="personal-profile" id="part3-box-1">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4" style="border-right">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="김태웅">
+            <div>
+                <h2 class="paragraph" style="color: white; font-size: 80px">Let me introduce myself</h2><br>
+                <h3 class="paragraph" style="color: white; font-size: 30px; font-family: 'Noto Sans', sans-serif;">
+                    안녕하세요! NFT의 팀장을 맡은 이솔입니다!</h3><br>
+                <p class="paragraph" style="color: white; width: 85%; line-height: 2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;컴퓨터 공학을 전공했지만, 카페 아르바이트가 너무 재밌어서 '난 카페를 창업할래!' 라는 마음으로
+                    학부때부터 졸업 후에도 줄 곧 카페일에 종사했습니다.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;그러나 한편으로 학업에는 소홀했던 점이 자꾸 마음에 걸렸습니다. 내가 원해서 입학한 컴퓨터공학과인데 너무 쉽게 전공을 포기해 버린 것은 아닌지...
+                    그런 생각이 자꾸 든다는 것은 그걸 해야 된다는 뜻이겠지요...?! (카페 창업은 먼 미래에 해도 될 일이니까!!!)<br>&nbsp;&nbsp;&nbsp;&nbsp;그렇게 호다닥 코딩의 세계로 다시 들어왔습니다
+                    >.-<br>
+                    학부때 공부하지 않았던 것에 아쉬움이 많기 때문에 이곳 내배캠에서는 미련없이 공부하자고 다짐했습니다! 정말 열심히 배워서 레벨업 해버릴 테니 우리 모두 함께
+                    강.해.지.자.구. 후후...
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;모두 모두 함께 공부하게 되어 너무 반갑고 앞으로 잘 부탁드립니다 ~ !!!</p>
             </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">김태웅</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
+        </div>
+    </section>
+    <section class="two">
+        <div class="information_box" style="color:#3381B2">
+            <div>
+                <h2 class="paragraph" style="color: #3381B2; font-size: 80px" align="center">Sol's Information</h2><br>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top: 30px">
+                <div class="col">
+                    <div class="infocard">
+                        <p align="center" style="padding-top: 20px"><i class="fa-solid fa-user fa-8x"></i></p>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">Profile</h5>
+                            <p class="card-text">
+                                <li> 이름 : 이솔</li>
+                                <li> 성별 : 여</li>
+                                <li> 생년월일 : 1997.07.05</li>
+                                <li> MBTI : ENFP</li>
+                                <li> 사는곳 : 인천 광역시 연수구</li>
+                                <li> 이메일 : leeso4567@naver.com</li>
+                                <li><a href="mailto:leeso4567@naver.com" class="card-link"><i class="fa-regular fa-envelope"></i></a>
+                                    <a href="https://tobeagoodengineer.tistory.com/" class="card-link"><i class="fa-solid fa-blog fa-10px"></i></a>
+                                    <a href="https://www.instagram.com/eeeeesol/" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="infocard">
+                        <p align="center" style="padding-top: 20px"><i class="fa-solid fa-school fa-8x"></i></p>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">Career</h5>
+                            <p class="card-text">
+                                <li> 2010 - 옥련초등학교 졸업</li>
+                                <li> 2013 - 인송중학교 졸업</li>
+                                <li> 2017 - 연수여자고등학교 졸업</li>
+                                <li> 2021 - 인천대학교 컴퓨터공학과 졸업</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="infocard">
+                        <p align="center" style="padding-top: 20px"><i class="fa-solid fa-cloud fa-8x"></i></p>
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">Interest</h5>
+                            <p class="card-text">
+                                <li> 취미 : 뜨개질, 베이킹</li>
+                                <li> 좋아하는 것 : 커피, 헬스, 수영, 등산</li>
+                                <li> 싫어하는 것 : 민트초코</li>
+                                <li> 장점 : 긍정적, 사교적, 밝은 에너지</li>
+                                <li> 협업 스타일 : 맡은바는 확실하게 하기, 함께 성장해 나가기</li>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="personal-profile" id="part3-box-2">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="김송미">
+    </section>
+    <section class="three">
+        <div class="comment-box">
+            <div class="mb-3">
+                <input type="email" class="form-control" id="name" placeholder="nickname"
+                       style="width: 295px; font-size: 17px; border: black 6px;">
             </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">김송미</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
+            <br>
+            <div class="mb-3">
+                <textarea class="form-control" id="comment" cols="40" rows="5"
+                          style="font-size: 17px" placeholder="comment here"></textarea>
             </div>
-        </div>
-    </div>
-    <div class="personal-profile" id="part3-box-3">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="이솔">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">이솔</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
+            <div style="text-align: center">
+                <p>
+                    <button onclick="like_count3()" type="button" class="btn btn-dark">좋아요👍<span id="likesu3">0</span>
+                    </button>
+                    <button onclick="save_comment(),show_comment()" type="button" class="btn btn-dark">댓글 남기기</button>
+                </p>
             </div>
         </div>
-    </div>
-    <div class="personal-profile" id="part3-box-4">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="박찬환">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">박찬환</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="personal-profile" id="part3-box-5">
-        <div class="row g-0" style="transform:translate(0,12.5%);">
-            <div class="col-md-4">
-                <img style="height: 400px;"
-                     src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F176a91af-ed31-4e25-9bfb-d0e47a73aa2e%2FKakaoTalk_20221102_092504072.jpg?table=block&id=0bd32cb6-bc2f-408f-8da9-70604c20cafe&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=11fad463-5be8-4633-a5ab-aa8ae5a25974&cache=v2"
-                     class="img-fluid rounded-start" alt="홍승엽">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body" style="text-align: left">
-                    <h5 class="card-title" style="font-size: 50px">홍승엽</h5><br>
-                    <div style="font-size: 25px; border-left: thick solid #32a1ce; border-color: black; padding-left: 50px;">
-                        <p class="card-text" style="font-size: 30px">MBTI: ENFP</p>
-                        <p class="card-text">장점: 장점이 많음, 단점도 많음</p>
-                        <p class="card-text">협업 스타일: 헌신적, 이기적</p>
-                        <p class="card-text">블로그: <a href="https://velog.io/@milnil">velog.io/@milnil</a></p>
-                        <p class="card-text"><small class="text-muted">프로필 내용</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!-- 팀 소개 -->
-<section class="part4">
-    <div id="guest1">
-    <div class="mypost1">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name1" placeholder="url">
-            <label for="floatingInput">닉네임</label>
-        </div>
-        <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="comment1"
-          style="height: 100px"></textarea>
-            <label for="floatingTextarea2">응원댓글</label>
-        </div>
-        <button onclick="save_comment1()" type="button" class="btn btn-dark">댓글남기기</button>
-        <button onclick="like_count1()" type="button" class="btn btn-dark">좋아요👍<span id="likesu1">0</span></button>
-        </div>
-    <div class="mycards1" id="comment-list1">
-        <div class="card">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>새로운 앨범 너무 멋져요!</p>
-                    <footer class="blockquote-footer">호빵맨</footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="guest2">
-     <div class="mypost2">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name2" placeholder="url">
-            <label for="floatingInput">닉네임</label>
-        </div>
-        <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="comment2"
-          style="height: 100px"></textarea>
-            <label for="floatingTextarea2">응원댓글</label>
-        </div>
-        <button onclick="save_comment2()" type="button" class="btn btn-dark">댓글남기기</button>
-        <button onclick="like_count2()" type="button" class="btn btn-dark">좋아요👍<span id="likesu2">0</span></button>
-        </div>
-    <div class="mycards2" id="comment-list2">
-        <div class="card">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>새로운 앨범 너무 멋져요!</p>
-                    <footer class="blockquote-footer">호빵맨</footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="guest3">
-     <div class="mypost3">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name3" placeholder="url">
-            <label for="floatingInput">닉네임</label>
-        </div>
-        <div class="form-floating">
-<textarea class="form-control" placeholder="Leave a comment here" id="comment3"
-          style="height: 100px"></textarea>
-            <label for="floatingTextarea2">응원댓글</label>
-        </div>
-        <button onclick="save_comment3()" type="button" class="btn btn-dark">댓글남기기</button>
-        <button onclick="like_count3()" type="button" class="btn btn-dark">좋아요👍<span id="likesu3">0</span></button>
-        </div>
-    <div class="mycards3" id="comment-list3">
-        <div class="card">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>새로운 앨범 너무 멋져요!</p>
-                    <footer class="blockquote-footer">호빵맨</footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="guest4">
-    <div class="mypost4">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name4" placeholder="url">
-            <label for="floatingInput">닉네임</label>
-        </div>
-        <div class="form-floating">
-<textarea class="form-control" placeholder="Leave a comment here" id="comment4"
-          style="height: 100px"></textarea>
-            <label for="floatingTextarea2">응원댓글</label>
-        </div>
-        <button onclick="save_comment4()" type="button" class="btn btn-dark">댓글남기기</button>
-        <button onclick="like_count4()" type="button" class="btn btn-dark">좋아요👍<span id="likesu4">0</span></button>
-        </div>
-    <div class="mycards4" id="comment-list4">
-        <div class="card">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>새로운 앨범 너무 멋져요!</p>
-                    <footer class="blockquote-footer">호빵맨</footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div id="guest5">
-    <div class="mypost5">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name5" placeholder="url">
-            <label for="floatingInput">닉네임</label>
-        </div>
-        <div class="form-floating">
-<textarea class="form-control" placeholder="Leave a comment here" id="comment5"
-          style="height: 100px"></textarea>
-            <label for="floatingTextarea2">응원댓글</label>
-        </div>
-        <button onclick="save_comment5()" type="button" class="btn btn-dark">댓글남기기</button>
-        <button onclick="like_count5()" type="button" class="btn btn-dark">좋아요👍<span id="likesu5">0</span></button>
-        </div>
-    <div class="mycards5" id="comment-list5">
-        <div class="card">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>새로운 앨범 너무 멋져요!</p>
-                    <footer class="blockquote-footer">호빵맨</footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
+    </section>
 </body>
 </html>
-
-<!-- NFT 로고 <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/6699/6699362.png" width="100" height="100"></a> -->
